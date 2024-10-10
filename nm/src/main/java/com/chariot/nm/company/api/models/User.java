@@ -61,4 +61,18 @@ public class User {
     public void setCep(String cep) {
         this.cep = cep;
     }
+
+    public boolean isValid() {
+        // Verificar se os dados do usuário são válidos
+        if (this.getNome() == null || this.getNome().isEmpty()) {
+            return false;
+        }
+        if (this.getSenha() == null || this.getSenha().isEmpty()) {
+            return false;
+        }
+        if (this.getCep() == null || this.getCep().isEmpty()) {
+            return false;
+        }
+        return true;
+    }
 }
